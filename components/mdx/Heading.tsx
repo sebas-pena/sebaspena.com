@@ -1,5 +1,5 @@
 type HeadingProps = {
-	children: string
+	children?: React.ReactNode
 }
 
 const H1 = ({ children }: HeadingProps) => {

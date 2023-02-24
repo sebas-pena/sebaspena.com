@@ -1,7 +1,6 @@
 import React from "react"
 
-const KeyWordFilterPage = (props) => {
-	console.log(props)
+const KeyWordFilterPage = () => {
 	return <div>KeyWordFilterPage</div>
 }
 

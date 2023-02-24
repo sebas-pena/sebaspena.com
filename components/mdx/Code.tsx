@@ -7,8 +7,8 @@ const Code = ({
 	children,
 	className,
 }: {
-	children: string
-	className: string
+	children?: React.ReactNode
+	className?: string
 }) => {
 	const language = className ? className.replace(/language-/, "") : ""
 	return language ? (
@@ -27,7 +27,7 @@ const Code = ({
 				},
 			}}
 		>
-			{children}
+			{String(children)}
 		</SyntaxHighlighter>
 	) : (
 		<code className="px-2 bg-neutral-200 text-neutral-600 rounded-[3px]">
