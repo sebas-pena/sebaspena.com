@@ -1,91 +1,51 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import LinkButton from "@/components/ui/link/LinkButton"
+import Image from "next/image"
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	return (
+		<main className="flex-1 flex flex-col-reverse md:flex-row items-center justify-center gap-16 px-4">
+			<div className="flex flex-col gap-1 text-[#333]">
+				<p className="text-3xl font-semibold">Hello!</p>
+				<h2 className="text-4xl font-semibold">My name is Pablo Peña,</h2>
+				<p className="max-w-lg text-lg">
+					I&apos;m a 20-year-old full-stack developer living in Montevideo,
+					Uruguay. Since I was young, I discovered my passion for technology and
+					programming, which led me to study and train as a developer.
+				</p>
+				<div className="flex flex-wrap gap-2 mt-2">
+					<LinkButton
+						href="/resume.pdf"
+						rel="noopener nofollow"
+						target="_blank"
+						className="bg-primary-600 hover:bg-primary-700"
+						download="Pablo Peña"
+					>
+						<div className="flex gap-2">
+							<Image src="/svg/resume.svg" width={20} height={20} alt="" />
+							<span className="text-white">Downoad Resume</span>
+						</div>
+					</LinkButton>
+					<LinkButton
+						rel="noopener nofollow"
+						href="mailto://pablo.sebastian.pena@gmail.com"
+						className="bg-[#25d366] hover:bg-[#20b959]"
+					>
+						<div className="flex gap-2">
+							<Image src="/svg/mail.svg" width={20} height={20} alt="" />
+							<span className="text-white">Contact Me</span>
+						</div>
+					</LinkButton>
+				</div>
+			</div>
+			<div className="rounded-full border-solid border-2 border-primary outline-8 outline-solid outline outline-white shadow-profile mr-7">
+				<Image
+					className="rounded-full"
+					height={220}
+					width={220}
+					alt="Pablo Peña"
+					src="/images/profile.jpg"
+				/>
+			</div>
+		</main>
+	)
 }
