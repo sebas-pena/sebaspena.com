@@ -22,7 +22,7 @@ const ProjectCard = (props: ProjectType) => {
 						{props.tools.map((tool) => (
 							<Image
 								key={tool}
-								src={`/svg/tech/${tool}.svg`}
+								src={`/svg/tech/${tool.toLocaleLowerCase()}.svg`}
 								width={25}
 								height={25}
 								alt={tool}
