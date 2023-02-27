@@ -31,7 +31,7 @@ export const AboutConfig = {
 			certificates: [
 				{
 					internal: false,
-					src: "https://www.coursera.org/account/accomplishments/specialization/certificates/F3B9H8C8MPJE",
+					src: "https://coursera.org/share/bac95e572da329269aa747f0465bf61d",
 				},
 			],
 		},
