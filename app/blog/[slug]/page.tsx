@@ -22,7 +22,7 @@ export async function generateStaticParams(): Promise<Params[]> {
 
 const PostPage = async ({ params }: Props) => {
 	const { frontMatter, source } = await getPostBySlug(params.slug)
-	const { date, title, description, tags, logo } = frontMatter
+	const { date, title, tags, logo } = frontMatter
 	return (
 		<main>
 			<article className="mx-auto pt-6 px-4 max-w-3xl w-full">
