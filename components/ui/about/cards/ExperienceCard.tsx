@@ -4,7 +4,7 @@ import React from "react"
 
 const ExperienceCard = (props: ExperienceType) => {
 	return (
-		<div className="p-3 px-4 border border-neutral-300 rounded-lg">
+		<div className="p-3 px-4 border border-neutral-300 rounded-lg bg-white">
 			<h3 className="font-semibold text-xl">{props.title}</h3>
 			<div className="flex items-center gap-2 my-2">
 				<Image src="/svg/calendar.svg" width={20} height={20} alt="" />

@@ -3,7 +3,10 @@ import React from "react"
 
 const ToolCard = ({ tool }: { tool: string }) => {
 	return (
-		<div className="p-4 rounded-lg border border-neutral-200" title={tool}>
+		<div
+			className="p-4 rounded-lg border border-neutral-200 bg-white"
+			title={tool}
+		>
 			<Image
 				key={tool}
 				height={30}
