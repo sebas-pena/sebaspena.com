@@ -22,7 +22,7 @@ const socialLinks: SocialLinkProps[] = [
 const Footer = () => {
 	return (
 		<footer className="py-4 mt-5">
-			<p className="text-center mb-2">Find me on</p>
+			<p className="text-center mb-2">Encuéntrame En</p>
 			<div className="flex gap-4 justify-center">
 				{socialLinks.map((socialLink) => (
 					<SocialLink key={socialLink.href} {...socialLink} />
