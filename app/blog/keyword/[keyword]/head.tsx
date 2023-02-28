@@ -15,6 +15,8 @@ export default async function Head(props: {
 	return (
 		<>
 			<title>{`Articulos sobre ${keyword}`}</title>
+			<link rel="icon" href="/svg/crab.svg" />
+			<meta property="og:site_name" content="sebaspena.com"></meta>
 			<meta name="twitter:card" content="summary_large_image"></meta>
 			<meta name="description" content={descriptions[keyword]} />
 			<meta property="og:title" content={`Articulos sobre ${keyword}`} />

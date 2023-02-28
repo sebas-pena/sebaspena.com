@@ -5,6 +5,8 @@ export default async function Head(props: { params: { slug: string } }) {
 	return (
 		<>
 			<title>{title}</title>
+			<link rel="icon" href="/svg/crab.svg" />
+			<meta property="og:site_name" content="sebaspena.com"></meta>
 			<meta name="description" content={description} />
 			<meta property="og:title" content={title} />
 			<meta property="og:type" content="blog" />

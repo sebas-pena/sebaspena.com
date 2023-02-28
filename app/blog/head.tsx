@@ -2,6 +2,8 @@ export default function Head() {
 	return (
 		<>
 			<title>Pablo Peña - Blog</title>
+			<link rel="icon" href="/svg/crab.svg" />
+			<meta property="og:site_name" content="sebaspena.com"></meta>
 			<meta name="twitter:card" content="summary_large_image"></meta>
 			<meta
 				name="description"
