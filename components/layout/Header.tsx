@@ -10,7 +10,11 @@ const NavLinks: NavLinkProps[] = [
 	{ href: "/about", text: "Sobre Mi" },
 ]
 
-const Header = () => {
+const Header = ({
+	postsData,
+}: {
+	postsData: { title: string; description: string; slug: string }[]
+}) => {
 	return (
 		<header className="flex w-full justify-between max-w-5xl m-auto p-5 mb-5">
 			<Link
@@ -27,8 +31,8 @@ const Header = () => {
 					Sebas
 				</p>
 			</Link>
-			<nav className="flex items-center gap-5">
-				<SearchInput className="hidden md:block" />
+			<nav className="relative flex items-center gap-5">
+				<SearchInput className="hidden md:block" postsData={postsData} />
 				<ul className="list-none items-center flex">
 					{NavLinks.map((item) => (
 						<li key={item.href}>
