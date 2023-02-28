@@ -7,7 +7,7 @@ import NavLink, { NavLinkProps } from "../ui/link/NavLink"
 const NavLinks: NavLinkProps[] = [
 	{ href: "/blog", text: "Blog" },
 	{ href: "/portfolio", text: "Portfolio" },
-	{ href: "/about", text: "About" },
+	{ href: "/about", text: "Sobre Mi" },
 ]
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
 			</Link>
 			<nav className="flex items-center gap-5">
 				<SearchInput className="hidden md:block" />
-				<ul className="list-none items-center flex gap-2">
+				<ul className="list-none items-center flex">
 					{NavLinks.map((item) => (
 						<li key={item.href}>
 							<NavLink {...item}>{item.text}</NavLink>
