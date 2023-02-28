@@ -8,7 +8,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
+		<html lang="es">
 			<head />
 			<body className="font-sans flex flex-col min-w-screen min-h-screen">
 				<Header />

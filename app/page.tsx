@@ -5,12 +5,13 @@ export default function Home() {
 	return (
 		<main className="flex-1 flex flex-col-reverse md:flex-row items-center justify-center gap-16 px-4">
 			<div className="flex flex-col gap-1 text-[#333]">
-				<p className="text-3xl font-semibold">Hello!</p>
-				<h2 className="text-4xl font-semibold">My name is Pablo Peña,</h2>
+				<p className="text-3xl font-semibold">¡Hola!</p>
+				<h1 className="text-4xl font-semibold">Mi nombre es Pablo Peña,</h1>
 				<p className="max-w-lg text-lg">
-					I&apos;m a 20-year-old full-stack developer living in Montevideo,
-					Uruguay. Since I was young, I discovered my passion for technology and
-					programming, which led me to study and train as a developer.
+					Soy un desarrollador full-stack de 20 años que vive en Montevideo,
+					Uruguay. Desde joven descubrí mi pasión por la tecnología y la
+					programación, lo que me llevó a estudiar y formarme como
+					desarrollador.
 				</p>
 				<div className="flex flex-wrap gap-2 mt-2">
 					<LinkButton
@@ -22,7 +23,7 @@ export default function Home() {
 					>
 						<div className="flex gap-2">
 							<Image src="/svg/resume.svg" width={20} height={20} alt="" />
-							<span className="text-white">Downoad Resume</span>
+							<span className="text-white">Descargar CV</span>
 						</div>
 					</LinkButton>
 					<LinkButton
@@ -32,7 +33,7 @@ export default function Home() {
 					>
 						<div className="flex gap-2">
 							<Image src="/svg/mail.svg" width={20} height={20} alt="" />
-							<span className="text-white">Contact Me</span>
+							<span className="text-white">Contacto</span>
 						</div>
 					</LinkButton>
 				</div>
