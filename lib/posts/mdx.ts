@@ -16,7 +16,11 @@ interface MatterResult extends GrayMatterFile<string> {
 	content: string
 }
 
-export const POSTS_KEYWORDS: KeyWordType[] = ["javascript", "react", "fing"]
+export const POSTS_MAIN_CATEGORIES: KeyWordType[] = [
+	"javascript",
+	"react",
+	"fing",
+]
 
 export const POSTS_PATH = path.join(process.cwd(), "content/posts")
 
@@ -63,4 +67,15 @@ export const getPosts = (): PostDataType[] => {
 	posts.sort((postA, postB) => postB.date.getTime() - postA.date.getTime())
 
 	return posts
+}
+
+export const getPostsByKeyWord = (keyword: KeyWordType): PostDataType[] => {
+	let posts = getPosts()
+	posts = posts.filter((post) => post.tags.includes(keyword))
+	return posts
+}
+
+export const getPostMeta = async (slug: string) => {
+	const { frontMatter } = await getPostBySlug(slug)
+	return { description: frontMatter.description, title: frontMatter.title }
 }

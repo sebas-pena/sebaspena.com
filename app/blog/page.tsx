@@ -1,6 +1,6 @@
 import BlogAside from "@/components/ui/blog/Aside"
 import PostCard from "@/components/ui/post/PostCard"
-import { getPosts, POSTS_KEYWORDS } from "@/lib/posts/mdx"
+import { getPosts, POSTS_MAIN_CATEGORIES } from "@/lib/posts/mdx"
 import React from "react"
 
 const BlogIndex = () => {
@@ -17,7 +17,7 @@ const BlogIndex = () => {
 					))}
 				</div>
 			</main>
-			<BlogAside keywords={POSTS_KEYWORDS} />
+			<BlogAside keywords={POSTS_MAIN_CATEGORIES} />
 		</div>
 	)
 }
