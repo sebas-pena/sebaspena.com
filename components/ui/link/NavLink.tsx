@@ -14,7 +14,7 @@ const NavLink = ({ href, text, ...props }: NavLinkProps) => {
 	return (
 		<Link
 			href={href}
-			className={`focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 py-2 px-3 ${
+			className={`focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 py-2 px-2 sm:px-3 ${
 				isActive ? "font-semibold border-0 border-b-2 border-[#333]" : ""
 			}`}
 		>

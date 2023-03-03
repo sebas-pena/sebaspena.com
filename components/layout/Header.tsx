@@ -16,7 +16,7 @@ const Header = ({
 	postsData: { title: string; description: string; slug: string }[]
 }) => {
 	return (
-		<header className="flex w-full justify-between max-w-5xl m-auto p-5 mb-5">
+		<header className="flex w-full justify-between max-w-5xl m-auto py-5 px-3 sm:p-5 mb-5">
 			<Link
 				href="/"
 				className="flex gap-2 items-center focus-visible:ring-2 focus-visible:ring-blue-400 outline-none"
@@ -35,7 +35,7 @@ const Header = ({
 				<SearchInput className="hidden md:block" postsData={postsData} />
 				<ul className="list-none items-center flex">
 					{NavLinks.map((item) => (
-						<li key={item.href}>
+						<li key={item.href} className="min-w-max">
 							<NavLink {...item}>{item.text}</NavLink>
 						</li>
 					))}
