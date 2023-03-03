@@ -72,7 +72,7 @@ const SearchInput = ({
 				/>
 			</label>
 			{result.length ? (
-				<ul className="absolute shadow-sm top-[calc(100%_+_2px)] flex flex-col w-full bg-white">
+				<ul className="absolute z-20 shadow-sm top-[calc(100%_+_2px)] flex flex-col w-full bg-white">
 					{result.map((post) => (
 						<li
 							className="border hover:relative hover:z-10 hover:ring-1 hover:ring-blue-400 border-neutral-200"
