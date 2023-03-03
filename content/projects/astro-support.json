@@ -1,0 +1,9 @@
+{
+	"title": "Astro Support",
+	"description": "Astro Supporter es mi participacion en una hackaton, es API que utiliza la IA de Co:Here para generar descripciones, responder preguntas y crear JSONs cualquier producto.",
+	"tools": ["React", "Tailwind", "NextJs"],
+	"link_repo": "https://github.com/sebas-pena/astro-supporter",
+	"link_demo": "https://product-supporter.vercel.app/",
+	"date": "2023-01-01",
+	"image": "astro-supporter.png"
+}

@@ -1,9 +1,0 @@
-{
-	"title": "Space invader",
-	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis libero eget mauris efficitur suscipit. Vivamus aliquam odio vel est eleifend bibendum.",
-	"tools": ["JavaScript", "React"],
-	"link_repo": "https://github.com/sebas-pena/space-invader",
-	"link_demo": "https://google.com/",
-	"date": "2022-01-01",
-	"image": "space-invaders.jpg"
-}

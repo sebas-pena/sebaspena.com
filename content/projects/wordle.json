@@ -1,0 +1,9 @@
+{
+	"title": "Wordle",
+	"description": "El proyecto es una copia del popular juego en Wordle, el objetivo era practicar mis habilidades en HTML, CSS y JavaScript.",
+	"tools": ["HTML", "CSS", "JavaScript"],
+	"link_repo": "https://https://github.com/sebas-pena/wordle",
+	"link_demo": "https://sebas-pena.github.io/wordle/",
+	"date": "2022-07-01",
+	"image": "wordle.png"
+}
