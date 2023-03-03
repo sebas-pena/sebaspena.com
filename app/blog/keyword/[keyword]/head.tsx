@@ -1,3 +1,4 @@
+import SeoHead from "@/components/seo/Head"
 import { KeyWordType } from "@/types/post"
 
 export default async function Head(props: {
@@ -14,20 +15,12 @@ export default async function Head(props: {
 	}
 	return (
 		<>
-			<title>{`Articulos sobre ${keyword}`}</title>
-			<link rel="icon" href="/svg/crab.svg" />
-			<meta property="og:site_name" content="sebaspena.com"></meta>
-			<meta name="twitter:card" content="summary_large_image"></meta>
-			<meta name="description" content={descriptions[keyword]} />
-			<meta property="og:title" content={`Articulos sobre ${keyword}`} />
-			<meta property="og:type" content="blog" />
-			<meta property="og:description" content={descriptions[keyword]} />
-			<meta property="og:image" content="/images/logo.webp" />
-			<meta
-				property="og:url"
-				content={`https://sebaspena.com/blog/${keyword}`}
+			<SeoHead
+				title={`Articulos sobre ${keyword}`}
+				description={descriptions[keyword]}
+				type="blog"
+				url={`https://sebaspena.com/blog/${keyword}`}
 			/>
-			<meta property="og:locale" content="es_ES" />
 		</>
 	)
 }

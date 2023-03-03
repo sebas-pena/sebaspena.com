@@ -1,23 +1,23 @@
+import SeoHead from "@/components/seo/Head"
+
 export default function Head() {
+	/* 
+<SeoHead
+			title=""
+			description=""
+			type=""
+			url=""
+		/>
+*/
+
 	return (
 		<>
-			<title>Pablo Peña - Portfolio</title>
-			<link rel="icon" href="/svg/crab.svg" />
-			<meta property="og:site_name" content="sebaspena.com"></meta>
-			<meta name="twitter:card" content="summary_large_image"></meta>
-			<meta
-				name="description"
-				content="Si buscas conocer más sobre mi experiencia profesional, echa un vistazo a mi portafolio en mi página web. Descubre mis proyectos más recientes y cómo puedo ayudarte."
+			<SeoHead
+				title="Pablo Peña - Portfolio"
+				description="Si buscas conocer más sobre mi experiencia profesional, echa un vistazo a mi portafolio en mi página web. Descubre mis proyectos más recientes y cómo puedo ayudarte."
+				type="article"
+				url="https://sebaspena.com/portfolio"
 			/>
-			<meta property="og:title" content="Pablo Peña - FrontEnd Developer" />
-			<meta property="og:type" content="website" />
-			<meta
-				property="og:description"
-				content="Si buscas conocer más sobre mi experiencia profesional, echa un vistazo a mi portafolio en mi página web. Descubre mis proyectos más recientes y cómo puedo ayudarte."
-			/>
-			<meta property="og:image" content="/images/logo.webp" />
-			<meta property="og:url" content="https://sebaspena.com/" />
-			<meta property="og:locale" content="es_ES" />
 		</>
 	)
 }
