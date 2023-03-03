@@ -36,9 +36,14 @@ const KeyWordFilteredPage = ({ params }: Props) => {
 					}
 				</h1>
 				<div className="flex flex-col gap-4">
-					{posts.map((post) => (
-						<PostCard {...post} key={post.slug} />
-					))}
+					{posts.length ? (
+						posts.map((post) => <PostCard {...post} key={post.slug} />)
+					) : (
+						<h2>
+							Aún no he publicado contenido en esta categoría. Si tienes alguna
+							sugerencia, es bienvenida.
+						</h2>
+					)}
 				</div>
 			</main>
 			<BlogAside keywords={POSTS_MAIN_CATEGORIES} />
