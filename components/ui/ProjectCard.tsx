@@ -6,12 +6,12 @@ import DemoLink from "./link/DemoLink"
 
 const ProjectCard = (props: ProjectType) => {
 	return (
-		<div className="md:flex gap-5 p-4 rounded-lg bg-white shadow-md border-neutral-100 border">
+		<div className="flex flex-col md:flex-row h-full gap-5 p-4 rounded-lg bg-white shadow-md border-neutral-100 border">
 			<Image
 				src={`/images/screenshots/${props.image}`}
-				className="object-cover w-full md:w-max"
-				height={160}
-				width={(160 * 16) / 9}
+				className="w-full md:w-auto object-contain aspect-video"
+				height={170}
+				width={(170 * 16) / 9}
 				alt={`${props.title} screenshot`}
 			/>
 			<div className="flex flex-col flex-1">
