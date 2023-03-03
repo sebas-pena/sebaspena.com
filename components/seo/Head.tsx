@@ -20,7 +20,7 @@ const SeoHead = ({ title, description, type, url }: SeoHeadType) => {
 			<meta property="og:description" content={description} />
 			<meta
 				property="og:image"
-				content="https://sebaspena.com/images/logo.webp"
+				content="https://sebaspena.com/images/logo.png"
 			/>
 
 			<meta property="og:site_name" content="sebaspena.com"></meta>
