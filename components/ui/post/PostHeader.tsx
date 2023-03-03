@@ -16,9 +16,11 @@ export const PostHeader = ({
 	logo,
 }: PostHeaderProps) => {
 	return (
-		<header className="mb-7 mt-3 flex gap-4">
-			<Logo type={logo} />
-			<div>
+		<header className="relative mb-7 mt-3 flex gap-4">
+			<div className="absolute left-[-20px] top-[20px] opacity-10 scale-[2] sm:top-0 sm:left-0 sm:scale-100 sm:relative sm:opacity-100 shrink-0 ">
+				<Logo type={logo} className="md:w-max" />
+			</div>
+			<div className="relative z-10">
 				<h1 className="mt-0 mb-2 text-4xl font-semibold">{title}</h1>
 				<div className="flex gap-4 text-sm">
 					<time
