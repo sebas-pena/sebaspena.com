@@ -4,7 +4,8 @@ import code from "../../mdx/Code"
 import li from "../../mdx/Li"
 import Headings from "../../mdx/Heading"
 import p from "../../mdx/P"
-
+import { Ol as ol, Ul as ul } from "@/components/mdx/Lists"
+import a from "@/components/mdx/Link"
 export default function PostContent({
 	compiledSource,
 }: {
@@ -13,7 +14,7 @@ export default function PostContent({
 	return (
 		<MDXRemote
 			compiledSource={compiledSource}
-			components={{ ...Headings, code, li, p }}
+			components={{ ...Headings, code, li, p, ol, ul, a }}
 		/>
 	)
 }
