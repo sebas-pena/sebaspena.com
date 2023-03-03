@@ -10,7 +10,7 @@ const Logo = ({
 	type: LogoType
 }) => {
 	return (
-		<picture>
+		<picture className="shrink-0">
 			<Image
 				src={`/images/logos/${type}.webp`}
 				width={70}
