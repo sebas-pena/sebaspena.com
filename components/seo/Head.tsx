@@ -34,7 +34,7 @@ const SeoHead = ({ title, description, type, url }: SeoHeadType) => {
 			<meta name="twitter:description" content={description} />
 			<meta
 				name="twitter:image"
-				content="https://sebaspena.com/images/logo.webp"
+				content="https://sebaspena.com/images/logo.png"
 			/>
 		</>
 	)
