@@ -6,39 +6,9 @@ tags: ["inco", "fing"]
 logo: inco
 ---
 
-## 1. Instalar GCC en Windows
+## Activar WSL en Windows
 
-El primer paso para configurar tu entorno de programación en Windows es instalar un compilador de C++. El compilador que se utiliza en las máquinas virtuales de la FING y que los profesores utilizan para correr las tareas es GCC. Por lo tanto, para mayor practicidad instalaremos ese.
-
-### Qué es el kit de herramientas de desarrollo (DevKit) de w64devkit
-
-w64devkit es un kit de herramientas de desarrollo (DevKit) que proporciona herramientas para compilar y enlazar programas en C y C++ en sistemas Windows de 64 bits. El DevKit contiene una variedad de herramientas de compilación, como el compilador GCC.
-
-### Cómo instalar w64devkit
-
-1. Para ello, accede al repositorio [w64devkit](https://github.com/skeeto/w64devkit) y descarga la última versión preconstruida, para esto ve a la pestaña [releases](https://github.com/skeeto/w64devkit/releases) la version latest y en Assets busca `w64devkit-VERSION.zip`. En el momento de escribir este post, la última versión disponible es la 1.18.0, y el archivo que necesito descargar es w64devkit-1.18.0.zip.
-
-2. Extraelo en la raiz del disco C, `C:\`.
-
-### Agregar el PATH a las variables de entorno
-
-1. Copia la ruta hacia la carpeta bin dentro de los archivos descomprimidos. Debería lucir similar a `C:\w64devkit\bin`.
-
-2. Busca "editar las variables de entorno del sistema" o "editar las variables de entorno para esta cuenta" en el icono de Windows.
-
-3. De la lista de variables, selecciona `Path` y presiona `Editar`.
-
-4. Presiona `Nuevo` y pega la ruta hacia la carpeta bin. Debería agregarse a la lista algo similar a `C:\w64devkit\bin`.
-
-5. Presiona `Aplicar` y `Aplicar` para guardar los cambios.
-
-6. Abre una terminal CMD o PowerShell y ejecuta `gcc -v`. Si todo se hizo correctamente, debería aparecer un mensaje que contiene `gcc version 12.2.0 (GCC)` (o cualquier otra versión, lo que indica que se instaló correctamente).
-
-Siguiendo estos pasos, habrás configurado correctamente tus variables de entorno y estarás listo para compilar programas en C++ utilizando GCC y otras herramientas incluidas en el DevKit de w64devkit.
-
-## 2. Activar WSL en Windows
-
-El Windows Subsystem for Linux (WSL) es una funcionalidad de Windows 10 que permite correr un ambiente de Linux dentro de Windows, permitiendo ejecutar aplicaciones y comandos de Linux sin la necesidad de instalar una máquina virtual o un sistema operativo Linux en la computadora.
+El Windows Subsystem for Linux (WSL) es una funcionalidad de Windows 10 y 11 que permite correr un ambiente de Linux dentro de Windows, permitiendo ejecutar aplicaciones y comandos de Linux sin la necesidad de instalar una máquina virtual o un sistema operativo Linux en la computadora.
 
 1. Activa el modo desarrollador, busca "Configuración del desarrollador" en el icono de Windows y activalo.
 
@@ -56,7 +26,9 @@ El Windows Subsystem for Linux (WSL) es una funcionalidad de Windows 10 que perm
 
 8. Ahora deberías tener una aplicación llamada Ubuntu en el icono de Windows. Al ejecutarla se creará una instancia de Ubuntu.
 
-### Configuración adicional
+### Instalar GCC, Make y Valgrind.
+
+Durante el curso de Programación 2, será necesario crear programas en C/C++. Para ello, resulta vital contar con un compilador. En este caso, utilizaremos GCC, que es el mismo que emplean las máquinas de la FING. Además, requeriremos de Valgrind y Make. Valgrind es una herramienta para depurar la memoria y detectar errores como memory leaks. Por su parte, Make se necesitara en las tareas, ya que permite automatizar la compilación, ejecutar pruebas y generar el entregable mediante un makefile que nos darán.
 
 1. Ejecutar `sudo apt update`
 
@@ -66,8 +38,8 @@ El Windows Subsystem for Linux (WSL) es una funcionalidad de Windows 10 que perm
 
 4. Ejecutar `sudo apt install valgrind`
 
-Realizando esta configuración también contarías con g++ en tu entorno Linux y el comando `make`.
+Realizando estos pasos contarías con gcc, el comando `make` y `valgrind`.
 
-Por último, para encontrar tus archivos de Windows debes moverte a hacia `cd /mnt/c/Users/TU-USUARIO`, para volver a tus archivos de Linux simplemente `cd` o ve hacia `cd /home/TU-USUARIO` (El usuario varía según el nombre que le hayas dado)
+Por último, para encontrar tus archivos de Windows debes moverte a hacia `cd /mnt/c/Users/TU-USUARIO`, para volver a tus archivos de Linux simplemente `cd`.
 
 Ten en cuenta que, además de Ubuntu, hay otras distribuciones disponibles en la Microsoft Store, como Kali Linux, Debian, Fedora, entre otros.
