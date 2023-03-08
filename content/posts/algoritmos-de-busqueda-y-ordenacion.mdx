@@ -1,0 +1,137 @@
+---
+title: Algoritmos de búsqueda y ordenación en C
+date: 2023-03-8
+description: Algoritmos de búsqueda y ordenación explicados con codigo en C/C++, Ordenamiento por Inserción, Selección y Búsqueda Binaria y Secuencial.
+tags: ["inco", "fing", "c", "c++"]
+logo: inco
+---
+
+## Algoritmos de Búsqueda
+
+### Búsqueda Binaria
+
+En la búsqueda binaria se busca el elemento en el arreglo de forma recursiva. La idea es dividir el arreglo en dos partes y buscar el elemento en la mitad.
+
+- Si el elemento es menor que el elemento de la mitad, se busca en la primera mitad.
+- Si el elemento es mayor que el elemento de la mitad, se busca en la segunda mitad.
+- Si el elemento es igual al elemento de la mitad, se retorna la posicion de la mitad.
+
+EJ: 1,2,3,4,5,6,7 (Buscar el elemento 3).
+
+1. Se divide el arreglo en dos partes, la primera mitad es 1,2,3,4 y la segunda mitad es 5,6,7.
+2. Como 3 menor que el elemento de la mitad (4), se busca en la primera mitad (1,2,3,4).
+3. Se divide el arreglo en dos partes, la primera mitad es 1,2 y la segunda mitad es 3,4.
+4. Como 3 es mayor que el elemento de la mitad (2), se busca en la segunda mitad (3,4).
+5. Se divide el arreglo en dos partes, la primera mitad es 3 y la segunda mitad es 4.
+6. Como 3 es igual al elemento de la mitad (3), se retorna la posición (2).
+
+```c
+int busquedaBinaria(int arreglo[], int tope, int elementoABuscar) {
+  int posicion = -1;
+  int inicio = 0;
+  int fin = tope - 1;
+  int mitad = (inicio + fin) / 2;
+
+  while (inicio <= fin) {
+    if (arreglo[mitad] == elementoABuscar) {
+      posicion = mitad;
+      break;
+    } else if (arreglo[mitad] < elementoABuscar) {
+      inicio = mitad + 1;
+    } else {
+      fin = mitad - 1;
+    }
+    mitad = (inicio + fin) / 2;
+  }
+
+  return posicion;
+}
+```
+
+### Búsqueda Secuencial
+
+En la búsqueda secuencial se recorre el arreglo desde el inicio hasta que se encuentra el elemento o se llega al final del arreglo.
+Una vez que se encuentra el elemento se retorna la posición en la que se encuentra, si no se encuentra se retorna -1.
+
+```c
+int busquedaSecuencial(int arreglo[], int tope, int elementoABuscar) {
+  int posicion = -1;
+
+  for (int i = 0; i < tope; i++) {
+    if (arreglo[i] == elementoABuscar) {
+      posicion = i;
+      break;
+    }
+  }
+
+  return posicion;
+}
+```
+
+## Algoritmos de Ordenación
+
+### Ordenamiento por Selección
+
+En la ordenación por selección se recorre el arreglo desde el inicio hasta el final. En cada iteracion se inserta el elemento en la posicion i en la posicion correcta en la parte izquierda del arreglo.
+
+Ej: 4,3,1,2
+
+1. Se busca el menor elemento del arreglo, en este caso es 1, y se intercambia con el elemento en la posicion 0. (1,3,4,2)
+2. Se busca el siguiente menor elemento del arreglo, en este caso es 2, y se intercambia con el elemento en la posicion 1. (1,2,4,3)
+3. Se busca el siguiente menor elemento del arreglo, en este caso es 3, y se intercambia con el elemento en la posicion 2. (1,2,3,4)
+
+Al finalizar el algoritmo el arreglo queda ordenado. (1,2,3,4)
+
+```c
+void selectionSort(int arreglo[], int tope) {
+
+  for (int i = 0; i < tope; i++) {
+    int posicionMenor = i;
+
+    for (int j = i + 1; j < tope; j++) {
+      if (arreglo[j] < arreglo[posicionMenor]) {
+        posicionMenor = j;
+      }
+    }
+
+    int aux = arreglo[i];
+    arreglo[i] = arreglo[posicionMenor];
+    arreglo[posicionMenor] = aux;
+  }
+
+}
+```
+
+### Ordenamiento por Inserción
+
+En el ordenamiento por insercion se recorre el arreglo desde la posición 1 hasta el final, en cada iteracion se toma el elemento en la posición i y se compara con los elementos anteriores.
+
+Si el elemento en la posición i es menor que el elemento en la posición j, se intercambian los elementos.
+
+Recursivamente se compara el elemento en la posición i con los elementos anteriores hasta que se encuentra un elemento menor o se llega al inicio del arreglo.
+
+EJ: 1,3,2
+
+1. El elemento en la posición 0 se considera ordenado. (1,3,2)
+2. Se toma el elemento en la posición 1 (3) y se compara con el elemento en la posición 0 (1). Como 3 es mayor que 1, no se intercambian los elementos. (1,3,2)
+3. Se toma el elemento en la posición 2 (2) y se compara con el elemento en la posición 1 (3). Como 2 es menor que 3, se intercambian los elementos. (1,2,3)
+4. Se toma el elemento en la posición 2 (3) y se compara con el elemento en la posición 0 (1). Como 2 es mayor que 1, no se intercambian los elementos. (1,2,3)
+
+Al finalizar el algoritmo el arreglo queda ordenado. (1,2,3)
+
+```c
+void insertionSort(int arreglo[], int tope) {
+
+  for (int i = 1; i < tope; i++) {
+    int actual = arreglo[i];
+    int j = i - 1;
+
+    while (j >= 0 && arreglo[j] > actual) {
+      arreglo[j + 1] = arreglo[j];
+      j--;
+    }
+
+    arreglo[j + 1] = actual;
+  }
+}
+```
