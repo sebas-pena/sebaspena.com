@@ -1,0 +1,9 @@
+{
+	"title": "ImpoGPT",
+	"description": "Diseñe la interfaz de ImpoGPT utilizando Figma y apoye durante la implementación.",
+	"tools": ["Figma", "HTML", "CSS", "JavaScript"],
+	"link_repo": "https://github.com/carlosplanchon/ImpoGPT",
+	"link_demo": "/others/impo-gpt.fig",
+	"date": "2023-03-07",
+	"image": "impo-gpt.png"
+}
