@@ -1,19 +1,24 @@
+import React from "react"
 import { ProjectType } from "@/types/project"
 import Image from "next/image"
-import React from "react"
 import CodeLink from "./link/CodeLink"
 import DemoLink from "./link/DemoLink"
 
 const ProjectCard = (props: ProjectType) => {
+
 	return (
 		<div className="flex flex-col md:flex-row h-full gap-5 p-4 rounded-lg bg-white shadow-md border-neutral-100 border">
-			<Image
-				src={`/images/screenshots/${props.image}`}
-				className="w-full md:w-auto object-contain aspect-video"
-				height={170}
-				width={(170 * 16) / 9}
-				alt={`${props.title} screenshot`}
-			/>
+			<div
+				className="md:w-96"
+			>
+				<Image
+					src={`/images/screenshots/${props.image}`}
+					className="w-full object-contain aspect-video"
+					height={720 * 0.5625}
+					width={720}
+					alt={`${props.title} screenshot`}
+				/>
+			</div>
 			<div className="flex flex-col flex-1">
 				<h2 className="font-semibold text-xl my-2">{props.title}</h2>
 				<p className="mb-3">{props.description}</p>
