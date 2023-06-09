@@ -1,0 +1,13 @@
+{
+  "title": "Finger.UY",
+  "description": "Crear un mirror de OpenFING para que los estudiantes de la facultad puedan acceder a las clases cuando la plataforma está caída.",
+  "tools": [
+    "React",
+    "NextJs",
+    "Tailwind"
+  ],
+  "link_repo": "https://github.com/Finger-UY/finger.uy",
+  "link_demo": "https://finger.uy",
+  "date": "2023-05-01",
+  "image": "finger-uy.png"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Cuidemos el Agua",
+  "description": "Junto con egresados de JaP, hemos desarrollado una aplicación de impacto social para realizar reportes de pérdidas de agua, con el objetivo de combatir la sequía que sufre Uruguay.",
+  "tools": [
+    "React",
+    "NextJs",
+    "Tailwind"
+  ],
+  "link_repo": "https://github.com/sebas-pena/cuidemos-el-agua",
+  "link_demo": "https://cuidemos-el-agua.vercel.app/",
+  "date": "2023-06-01",
+  "image": "cuidemos-el-agua.png"
+}
